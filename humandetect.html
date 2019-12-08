@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<title>Human detection - CodeSpeedy</title>
+<meta name="theme-color" content="#308455" />
+<meta name="robots" content="noindex,nofollow" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<style type="text/css">
+
+    @-webkit-keyframes spinner { /* For Safari */
+      0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes spinner {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .spin-it {
+       -webkit-animation: spinner 1s linear infinite; /* Safari */
+       animation: spinner 1s linear infinite;
+    }
+
+
+	header {
+		padding: 8px;
+		background: #085129;
+		color: #fff;
+		text-align: center;
+		margin-bottom: 12px;
+	}
+	footer{
+		padding: 16px;
+		background: #085129;
+		margin-top: 16px;
+		color: #fff;
+	}
+	footer a {
+		color: #ccc;
+	}
+	#main {
+		margin-top: 10px;
+	}
+	/*#video-holder {
+		border: solid 2px #000;
+	}*/
+</style>
+
+</head>
+<body>
+
+	<header>
+		<h1>Human detector in JavaScript</h1>
+		<p>Works completely on your browser</p>
+	</header>
+
+<section id="main">
+  <div class="container">
+     <div class="col-sm-6" id="cnv-width">
+	   <div id="video-holder"></div>
+     </div>
+
+     <div class="col-sm-6" style="text-align: center;">
+  	   <h3>Status</h3>
+  	   <div id="status">
+  	   	<h3 style="color: blue;"><i class="fa fa-spinner spin-it"></i></h3>
+  	   	  <h3 style="color: #085129;">Waiting...</h3>
+  	   </div>
+
+
+      <div class="left-content" style="text-align: left;font-size: 18px;">
+  	   <p>
+  	   	  The human detector is built using ml5.js which is building on top of the TensorFlow.js JavaScript library.
+  	   </p>
+  	   <p>
+  	   	This is a demo of a machine learning or you can say artificial intelligence, developed by <a href="https://www.codespeedy.com">CodeSpeedy</a> team. Thanks to the makers and contributers of <a href="https://ml5js.org/">ml5js</a> library.
+  	   </p>
+  	   <!-- <p>What do you think about machine learning and artificial intelligence?</p> -->
+  	  </div>
+
+
+     </div>
+  </div>
+</section>
+
+<!-- Load canvas above -->
+
+
+ <audio style="display: none;" id="sirensound" controls>
+  <source src="smoke.mp3" type="audio/mpeg">
+</audio>
+
+
+<footer>
+	<div class="container">
+
+		<div class="col-sm-4">
+			<p>Hire our team for your machine learning project.</p>
+			<li><a href="https://www.codespeedy.com/category/machine-learning/">Read our machine learning articles</a></li>
+			<li><a href="https://www.codespeedy.com/blog">Programming blog</a></li>
+		</div>
+
+		<div class="col-sm-8">
+			<p>Machine learning and artificial intelligence are the future of technology.</p>
+			<p>This is just the starting of artificial intelligence. There are more surprise is coming soon.</p>
+			<p>We at CodeSpeedy, will always continue to make you surprise with our machine learning and artificial intelligence work.</p>
+		</div>
+
+		<!-- <div class="col-sm-4">
+		</div> -->
+
+	</div>
+</footer>
+
+<!-- <div>Teachable Machine Image Model - p5.js and ml5.js</div> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+<script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+<script src="detect.js"></script>
+
+
+</body>
+</html>
